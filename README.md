@@ -1,3 +1,9 @@
+Registro de llamadas realizado con React Hooks y bootstrap 4. Algunas validaciones simples, localstorage para mantener el registro.
+
+DEMO LIVE: https://ecstatic-darwin-1d809a.netlify.app/
+
+________________________________________________________________________________________________________
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
