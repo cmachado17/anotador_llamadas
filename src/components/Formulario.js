@@ -43,6 +43,9 @@ const Formulario = ({crearRegistro}) => {
       return;
     }
 
+    //eliminar mensaje error
+    setError(false);
+
     //asignar ID
     llamada.id = uuid();
 
@@ -61,9 +64,17 @@ const Formulario = ({crearRegistro}) => {
   };
 
   return (
+    <Fragment>
+    <h2>Ingresa una llamada</h2>
+    {
+      error == true ?  
+      (<p className="bg-white-opa mensaje-error">Todos los campos son obligatorios</p>)
+      : null
+    }
     <form>
       <div className="form-group">
-        <label>Persona que llamo</label>
+        {}
+        <label>Persona que llamo:</label>
         <input
           className="form-control"
           type="text"
@@ -73,7 +84,7 @@ const Formulario = ({crearRegistro}) => {
         />
       </div>
       <div className="form-group">
-        <label>Telefono de contacto</label>
+        <label>Teléfono de contacto:</label>
         <input
           className="form-control"
           type="text"
@@ -83,7 +94,7 @@ const Formulario = ({crearRegistro}) => {
         />
       </div>
       <div className="form-group">
-        <label>Hora</label>
+        <label>Hora:</label>
         <input
           className="form-control"
           type="time"
@@ -93,7 +104,7 @@ const Formulario = ({crearRegistro}) => {
         />
       </div>
       <div className="form-group">
-        <label>Fecha</label>
+        <label>Fecha:</label>
         <input
           className="form-control"
           type="date"
@@ -103,7 +114,7 @@ const Formulario = ({crearRegistro}) => {
         />
       </div>
       <div className="form-group">
-        <label>Motivo de contacto</label>
+        <label>Motivo de contacto:</label>
         <textarea
           className="form-control"
           name="motivo"
@@ -115,6 +126,7 @@ const Formulario = ({crearRegistro}) => {
         Enviar
       </button>
     </form>
+    </Fragment>
   );
 };
 
